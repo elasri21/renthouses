@@ -1,0 +1,265 @@
+:root {
+    --header-bg: #f2f2f2;
+    --blue-c: #86cddf;
+    --title-c: #111;/*text color*/
+    --footer-bg: #333333;
+    --link-c: #b8b4dd;
+    --hover-link-c: #d6d4ec;
+    --yellow-c: #f4ef75;
+    --soft-yellow: #f7f39a;
+    --grey-c: grey;
+}
+/* global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-color: #fff;
+    font-family: "Arial", sans-serif;
+}
+@media (min-width: 922px) {
+    .container {
+        margin-left: 100px !important;
+        margin-right: 100px !important;
+    }
+}
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* start header */
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    height: 74px;
+}
+@media (max-width: 767px) {
+    header nav {
+        display: none;
+        position: absolute;
+        top: 74px;
+        left: 0;
+        width: 100%;
+        background-color: var(--title-c);
+        padding: 30px;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav ul li {
+        flex-basis: 100%;
+    }
+    header nav ul li a {
+        color: white !important;
+    }
+    header nav .close {
+        display: block !important;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+header nav ul li a {
+    color: var(--footer-bg);
+}
+header nav ul li a:hover {
+    opacity: .75;
+}
+header nav .close {
+    color: white;
+    display: none;
+}
+@media (max-width: 767px) {
+    header .open {
+        display: block !important;
+    }
+}
+header .open {
+    display: none;
+}
+/* end header */
+/* start landing */
+.landing {
+    height: calc(100vh - 74px);
+    background-image: url("../images/landing-bg.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.landing .container a:hover {
+    background-color: var(--yellow-c);
+}
+/* end landing */
+
+/* start services */
+.services {
+    margin-bottom: -80px;
+}
+.services .container {
+    top: -130px;
+}
+@media (max-width: 767px) {
+    .services .container {
+        flex-direction: column;
+    }
+    .services .service {
+        width: 100% !important;
+    }
+}
+.services .service {
+    width: calc(33% - 20px);
+}
+
+/* end services */
+
+/* start buyer mistakes */
+.buyer-mistakes  {
+    height: calc(100vh - 74px);
+    background-image: url("../images/landing-bg.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+    .buyer-mistakes .container h2,
+    .buyer-mistakes .container p {
+        max-width: 100% !important;
+    }
+}
+.buyer-mistakes .container h2,
+.buyer-mistakes .container p {
+    max-width: 400px;
+}
+.buyer-mistakes .container a:hover {
+    background-color: var(--yellow-c);
+}
+/* end buyer mistakes */
+
+/* start about us */
+/* .about-us {
+    height: calc(100vh -74px);
+} */
+@media (max-width: 767px) {
+    .about-us .container {
+        flex-direction: column;
+    }
+    .about-us .container > div {
+        width: 100% !important;
+    }
+}
+.about-us .container > div {
+    width: calc(50% - 30px);
+}
+.about-us .container img {
+    max-height: 600px;
+    min-height: 300px;
+}
+/* end about us */
+
+/* start for-rent */
+.for-rent .container > p {
+    max-width: 500px;
+}
+.for-rent .container .houses {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.for-rent .container a:hover {
+    background-color: var(--yellow-c);
+}
+/* end for-rent */
+
+/* start building cost */
+.building-cost {
+    height: calc(100vh - 74px);
+    background-image: url("../images/landing-bg.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.building-cost .container h2,
+.building-cost .container p {
+    max-width: 650px;
+}
+.building-cost .container a:hover {
+    background-color: var(--yellow-c);
+}
+/* end building cost */
+
+/* start example-houses */
+@media (max-width:767px) {
+    .example-houses .container  {
+        flex-direction: column;
+    }
+    .example-houses .container > div {
+        width: 100% !important;
+    }
+}
+.example-houses .container > div {
+    width: calc(50% - 25px);
+}
+.example-houses .container a:hover {
+    opacity: .8;
+}
+/* end example-houses */
+/* start contact-us */
+.contact-us .container > p {
+    max-width: 500px;
+}
+.contact-us .container .map {
+    height: 500px;
+    background-image: url("../images/map.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.contact-us .container .map .info {
+    width: 300px;
+    top: 20px;
+    left: 20px;
+}
+.contact-us .container .map .plus-minus {
+    right: 20px;
+    bottom: 20px;
+}
+.contact-us .container .map .plus-minus .plus {
+    border-bottom: 1px solid var(--grey-c);
+}
+.contact-us .container .social-media i:hover {
+    color: var(--blue-c);
+}
+@media (max-width: 767px) {
+    .contact-us .container .contact-section {
+        flex-direction: column;
+    }
+    .contact-us .container .contact-section > div {
+        width: 100% !important;
+    }
+}
+.contact-us .container .contact-section > div {
+    width: calc(50% - 25px);
+}
+.contact-us .container form .submit:hover {
+    opacity: .8;
+}
+/* end contact-us */
+
+/* start footer */
+footer .text {
+    max-width: 500px;
+}
+/* end footer */
